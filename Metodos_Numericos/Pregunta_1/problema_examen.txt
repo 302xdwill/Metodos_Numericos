@@ -1,0 +1,6 @@
+PROBLEMA EXAMEN 1 - METODO TRAPECIO
+Integral: ∫[π, 2π] 3x^2 * sin(x) dx
+Funcion: 3*x**2*sin(x)
+a = 3.141592653589793
+b = 6.283185307179586
+n = 8
