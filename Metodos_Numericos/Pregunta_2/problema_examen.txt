@@ -1,0 +1,6 @@
+PROBLEMA SIMPSON 1/3
+Integral: ∫[0,1] 1/sqrt(3-2x) dx
+Funcion: 1/sqrt(3-2*x)
+a = 0
+b = 1
+n = 8
