@@ -1,0 +1,14 @@
+Problema: Extrapolación de Richardson
+
+Función:
+T(x) = e^(-0.5x) * cos(2x)
+
+DATO:
+Calcular T'(0.5) usando extrapolación de Richardson con h = 0.1
+
+Preguntas:
+a) Derivada analítica
+b) Tabla de valores entre 0.3 y 0.7 con h=0.05
+c) Valor verdadero de T'(0.5)
+d) Aproximación por Richardson
+e) Error porcentual real
