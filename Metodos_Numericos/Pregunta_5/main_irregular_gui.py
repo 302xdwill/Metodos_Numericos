@@ -82,6 +82,13 @@ def guardar():
         with open(ruta, "w") as f:
             f.write(txt)
         messagebox.showinfo("Guardado", "Archivo guardado.")
+# --------------------------------------------------------------------------------
+# LIMPIAR CAMPOS
+# --------------------------------------------------------------------------------
+def limpiar_campos():
+    entrada_x.delete(0, tk.END)
+    entrada_y.delete(0, tk.END)
+    salida.delete("1.0", tk.END)
 
 # --------------------------------------------------------------------------------
 # GUI
@@ -108,6 +115,7 @@ tk.Button(btns, text="Calcular", command=ejecutar).grid(row=0, column=0, padx=5)
 tk.Button(btns, text="Graficar", command=graficar).grid(row=0, column=1, padx=5)
 tk.Button(btns, text="Cargar archivo", command=cargar_archivo).grid(row=0, column=2, padx=5)
 tk.Button(btns, text="Guardar resultados", command=guardar).grid(row=0, column=3, padx=5)
+tk.Button(btns, text="Limpiar", command=limpiar_campos).grid(row=0, column=4, padx=5)
 
 salida = tk.Text(root, width=85, height=18)
 salida.pack(pady=5)

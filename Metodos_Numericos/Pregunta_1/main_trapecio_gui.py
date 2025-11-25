@@ -115,6 +115,17 @@ def guardar():
         with open(archivo, "w") as f:
             f.write(contenido)
         messagebox.showinfo("Guardado", "Archivo guardado correctamente")
+# ============================================================
+#   LIMPIAR CAMPOS
+# ============================================================
+
+def limpiar_campos():
+    entry_func.delete(0, tk.END)
+    entry_a.delete(0, tk.END)
+    entry_b.delete(0, tk.END)
+    entry_n.delete(0, tk.END)
+    archivo_path.set("")
+    text_result.delete("1.0", tk.END)
 
 # ============================================================
 #   SELECCIONAR ARCHIVO TXT
@@ -174,6 +185,8 @@ frame_btn.pack(pady=10)
 tk.Button(frame_btn, text="Calcular", command=ejecutar).grid(row=0, column=0, padx=5)
 tk.Button(frame_btn, text="Graficar", command=graficar).grid(row=0, column=1, padx=5)
 tk.Button(frame_btn, text="Guardar", command=guardar).grid(row=0, column=2, padx=5)
+tk.Button(frame_btn, text="Limpiar", command=limpiar_campos).grid(row=0, column=3, padx=5)
+
 
 # Resultados
 text_result = tk.Text(root, width=80, height=20)

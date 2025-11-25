@@ -101,6 +101,13 @@ def guardar():
             f.write(txt)
         messagebox.showinfo("Guardado", "Archivo guardado correctamente.")
 
+def limpiar_campos():
+    entrada_x.delete(0, tk.END)
+    entrada_h.delete(0, tk.END)
+    entry_a.delete(0, tk.END)
+    entry_b.delete(0, tk.END)
+    salida.delete("1.0", tk.END)
+
 # VENTANA PRINCIPAL
 root = tk.Tk()
 root.title("Extrapolación de Richardson - GUI")
@@ -130,6 +137,7 @@ tk.Button(btn_frame, text="Cargar archivo", command=cargar_archivo).grid(row=0, 
 tk.Button(btn_frame, text="Resolver", command=ejecutar).grid(row=0, column=1, padx=6)
 tk.Button(btn_frame, text="Graficar", command=graficar).grid(row=0, column=2, padx=6)
 tk.Button(btn_frame, text="Guardar resultados", command=guardar).grid(row=0, column=3, padx=6)
+tk.Button(btn_frame, text="Limpiar", command=limpiar_campos).grid(row=0, column=4, padx=6)
 
 # Salida
 salida = tk.Text(root, width=86, height=16)

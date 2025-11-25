@@ -110,6 +110,14 @@ def guardar():
             f.write(txt)
         messagebox.showinfo("Guardado","Archivo guardado")
 
+def limpiar_campos():
+    entry_func.delete(0, tk.END)
+    entry_a.delete(0, tk.END)
+    entry_b.delete(0, tk.END)
+    entry_n.delete(0, tk.END)
+    archivo_path.set("")
+    text_result.delete("1.0", tk.END)
+
 root = tk.Tk()
 root.title("Simpson 1/3 - GUI")
 root.geometry("820x560")
@@ -139,6 +147,7 @@ btns = tk.Frame(root); btns.pack(pady=6)
 tk.Button(btns,text="Calcular",command=ejecutar).grid(row=0,column=0,padx=6)
 tk.Button(btns,text="Graficar",command=graficar).grid(row=0,column=1,padx=6)
 tk.Button(btns,text="Guardar resultados",command=guardar).grid(row=0,column=2,padx=6)
+tk.Button(btns, text="Limpiar", command=limpiar_campos).grid(row=0, column=3, padx=6)
 
 text_result = tk.Text(root,width=100,height=18)
 text_result.pack(pady=8)
