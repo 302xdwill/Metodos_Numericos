@@ -151,15 +151,15 @@ entry_func = tk.Entry(frame_in, width=40)
 entry_func.grid(row=0, column=1)
 
 tk.Label(frame_in, text="a:").grid(row=1, column=0)
-entry_a = tk.Entry(frame_in, width=30)
+entry_a = tk.Entry(frame_in, width=25)
 entry_a.grid(row=1, column=1)
 
 tk.Label(frame_in, text="b:").grid(row=2, column=0)
-entry_b = tk.Entry(frame_in, width=10)
+entry_b = tk.Entry(frame_in, width=25)
 entry_b.grid(row=2, column=1)
 
 tk.Label(frame_in, text="n:").grid(row=3, column=0)
-entry_n = tk.Entry(frame_in, width=10)
+entry_n = tk.Entry(frame_in, width=25)
 entry_n.grid(row=3, column=1)
 
 # Cargar archivo
